@@ -1,0 +1,439 @@
+/* General body styling for all pages */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    min-height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    flex-direction: column; /* For sticky footer */
+}
+
+/* Specific wrappers for pages where the body itself needs styling */
+.landing-page-wrapper {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-page-wrapper {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Landing Page styles */
+.landing-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+}
+.landing-container h1 {
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+.landing-container p {
+    color: #6c757d;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.btn-action {
+    width: 180px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    margin: 10px auto; /* Center buttons */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.btn-action:hover {
+    transform: translateY(-2px);
+}
+
+/* Register & Login Page styles */
+.register-container, .login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 90%;
+}
+.register-container h2, .login-container h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+.form-label {
+    font-weight: 500;
+    color: #495057;
+}
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+.btn-register, .btn-login {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.login-link, .register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+.login-link a, .register-link a {
+    text-decoration: none;
+    font-weight: 500;
+}
+.login-link a:hover, .register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Home Page styles */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x500/202020/ffffff?text=Bienvenido+a+Cinex') no-repeat center center/cover;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.hero-section p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+.card-home {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+.card-home:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.card-home svg { /* Target Bootstrap Icons */
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+.card-home h3 {
+    color: #343a40;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.card-home p {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+/* Functions Card Page styles */
+.header-section {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+.header-section h1 {
+    color: #343a40;
+    font-weight: 700;
+}
+.function-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.function-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.function-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.function-card .card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.function-card .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+.function-card .card-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+.function-card .card-text {
+    font-size: 0.95rem;
+    color: #495057;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+.btn-buy {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    margin-top: auto;
+}
+
+/* Buy Ticket Page styles */
+.ticket-purchase-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.ticket-purchase-container h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+.seat-map {
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    margin-top: 20px;
+    text-align: center;
+}
+.seat-map h4 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+.seat-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.seat {
+    width: 35px;
+    height: 35px;
+    background-color: #adb5bd; /* Available */
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.seat.selected {
+    background-color: #007bff; /* Selected */
+    color: white;
+}
+.seat.occupied {
+    background-color: #dc3545; /* Occupied */
+    cursor: not-allowed;
+}
+.screen-indicator {
+    width: 80%;
+    height: 10px;
+    background-color: #343a40;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+.btn-purchase {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    margin-top: 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Profile Page styles */
+.profile-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 700px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.profile-container h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+.profile-info .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+}
+.profile-info .list-group-item:last-child {
+    border-bottom: none;
+}
+.profile-info .list-group-item strong {
+    color: #343a40;
+}
+.profile-info .list-group-item span {
+    color: #6c757d;
+}
+.btn-edit-profile {
+    width: auto;
+    padding: 10px 25px;
+    font-size: 1.05rem;
+    margin-top: 30px;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* My Functions Page styles */
+.ticket-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-left: 5px solid #007bff; /* Accent color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.ticket-card h5 {
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.ticket-card p {
+    margin-bottom: 5px;
+    color: #495057;
+    font-size: 0.95rem;
+}
+.ticket-card p strong {
+    color: #343a40;
+}
+.ticket-actions .btn {
+    margin-right: 10px;
+    border-radius: 6px;
+}
+.no-tickets-message {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: #6c757d;
+}
+
+/* Admin Dashboard Page styles */
+.sidebar {
+    background-color: #2c3e50; /* Darker sidebar */
+    color: white;
+    padding-top: 20px;
+    min-height: calc(100vh - 56px); /* Full height minus navbar */
+    position: sticky;
+    top: 56px; /* Below navbar */
+    left: 0;
+    overflow-y: auto;
+}
+.sidebar .nav-link {
+    color: #ecf0f1;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease;
+}
+.sidebar .nav-link.active, .sidebar .nav-link:hover {
+    background-color: #34495e;
+    color: #ffffff;
+    border-left: 4px solid #007bff;
+}
+.sidebar .nav-link svg { /* Target Bootstrap Icons */
+    margin-right: 10px;
+}
+.main-content {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.main-content h2 {
+    color: #343a40;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.dashboard-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+.dashboard-card:hover {
+    transform: translateY(-3px);
+}
+.dashboard-card svg { /* Target Bootstrap Icons */
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+.dashboard-card h4 {
+    font-size: 1.2rem;
+    color: #343a40;
+    margin-bottom: 5px;
+}
+.dashboard-card p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #28a745;
+}
+.table-responsive {
+    margin-top: 30px;
+}
+.table th {
+    background-color: #e9ecef;
+    color: #343a40;
+}
+.btn-action {
+    margin-right: 5px;
+}
